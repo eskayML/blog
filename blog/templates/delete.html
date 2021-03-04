@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h5 id="comfirm-head">Are u sure u want to delete this blog created by <b>"{{ blog.authors_name }}"?. </b></h5>
+
+<div class="confirm-options">
+    <a href="{% url 'home-page' %}" ><button class="btn btn-default" >
+        No, Keep it!
+    </button>
+    <form method="post"  action="">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-danger" >
+            Yes, Delete it!
+        </button>
+    </form>
+</div>
+
+{% endblock %}

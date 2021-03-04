@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post"  action="" >
+    {% csrf_token %}
+    
+    <h3 class="baddo" >
+        Create Blog
+    </h3>
+    <p>&nbsp;<b>Enter blog's  content</b> {{form.blog_content}}</p>
+    <p>&nbsp;<b>Enter authors name</b>{{form.authors_name}}</p>
+    <p>
+        <input type="submit" class="btn oya"  value="create blog">
+    </p>
+</form>
+
+{% endblock %}

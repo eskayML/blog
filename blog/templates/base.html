@@ -1,0 +1,48 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet"  href="{% static 'style.css'  %}"  >
+  <title>Blogging App</title>
+  </head>
+  <body>
+<div class="container">
+    <div id="main">
+    <div id="con">
+    <i class="fa fa-bars hamburger  fa-2x" ></i>
+    <h1 id="heading"  >
+        MyBlog<i class="fa fa-star" ></i>
+    </h1>
+    <!--  for the navigation bar -->
+        <div id="navigation">
+        <a href="{% url 'home-page' %}"><i class="fa fa-home fa-2x"> </i> </a>
+        &nbsp; 
+        &nbsp; 
+        &nbsp; 
+        &nbsp; 
+        &nbsp; 
+        &nbsp; 
+       <a href="{% url 'info-page' %}" > <i class="fa fa-info-circle fa-2x"></i>
+       </a>
+        </div>
+        
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+
+      {%block content%}
+      {%endblock%}
+   </div>
+   </div>
+</body>
+</html>

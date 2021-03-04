@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<form method="post"  action="" >
+    {% csrf_token %}
+    
+    <h3 class ="baddo" >
+        Edit this Blog
+    </h3>
+    <p>&nbsp;<b>Edit content</b> {{form.blog_content}}</p>
+    <p>&nbsp;<b>Edit authors name</b>{{form.authors_name}}</p>
+    <p>
+        <input type="submit" class="btn oya"  value="Save changes">
+    </p>
+</form>
+
+{% endblock %}

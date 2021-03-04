@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+{% block content %}
+{% if blogs|length  < 1 %}
+<h4>
+    <b>No blogs have been created</b>
+</h4>
+{%else%}
+    {% for blog in blogs %}
+        <div class="post-base">
+            <div class="post-top" >
+                <div class="dummy">
+                    <i class="fa fa-user"></i>
+                </div>•
+                <b style="display:inline;color:var(--spec) ; "> {{blog.authors_name}} </b> • <i>{{blog.created}}</i>
+            </div>
+            
+
+            
+            <div class="post-body">
+                {{blog.blog_content}}
+            </div>
+            <div class="post-bottom" >
+                <div class="edit-btn">
+                    
+                   <a href="update/{{blog.id}}" > <i class="fa fa-pencil-square-o" ></i> </a>
+                   
+                <a href="delete/{{blog.id}}" > <i class="fa fa-trash"></i></a>
+                
+                </div>
+            </div>
+        </div>
+        <br>
+  
+        {%endfor%}
+    {%endif%}
+        <!--  put add icon he -->
+       <a href="create/" ><div class="add" >
+            <i class="fa fa-plus" ></i>
+        </div>
+        </a>
+ 
+{% endblock %}
